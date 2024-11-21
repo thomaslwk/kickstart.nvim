@@ -23,4 +23,8 @@ return {
   -- Keymaps with conditional checks
   vim.keymap.set('n', 'H', safe_buffer_previous, { desc = 'Go to previous buffer (unless in Neo-tree)' }),
   vim.keymap.set('n', 'L', safe_buffer_next, { desc = 'Go to next buffer (unless in Neo-tree)' }),
+
+  -- Close the current buffer but don't close window
+  vim.keymap.set('n', '<leader>qd', ':bdelete<CR>', { noremap = true, silent = true })
+
 }
